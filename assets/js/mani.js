@@ -11,14 +11,20 @@ con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 
 
 //creare una griglia di 100 caselle
 
-for (let i = 0; i < 100; i++) {
-    const containerEl = document.querySelector('.container');
-    const creatingSquare = `<div class="square d-flex justify-content-center align-items-center"><span>${i + 1}</span>
-    </div>`
-    containerEl.insertAdjacentHTML('beforeend' , creatingSquare);
-    
 
+const createButtonEl = document.getElementById('create_button')
+
+createButtonEl.addEventListener('click' , function(){
     
-}
+    for (let i = 0; i < 100; i++) {
+        const containerEl = document.querySelector('.container');
+        const creatingSquare = `<div class="square d-flex justify-content-center align-items-center"><h5>${i + 1}</h5>
+        </div>`
+        containerEl.insertAdjacentHTML('beforeend' , creatingSquare);    
+    }
+    
+})
+
+
 
 
